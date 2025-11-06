@@ -44,5 +44,40 @@ function App() {
     </>
   )
 }
+  
+function Header () {
+    return (
+  <header>
+  <h1>My Favorite Cities</h1>
+</header>
+
+  );
+}
+
+function MainContent () {
+return (
+<main>
+  <p>I love to visit New York, Paris, and Tokyo.</p>
+</main>
+
+
+);
+
+
+}
+
+function Footer () {
+ return (
+         <footer>
+         <p>© 2023 City Lovers</p>
+          </footer>
+
+ );
+
+}
+
+
+
+
 
 export default App;
