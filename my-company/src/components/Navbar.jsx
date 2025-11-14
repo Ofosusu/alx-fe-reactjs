@@ -5,7 +5,9 @@ function Navbar() {
     <nav style={{
       backgroundColor: '#333',
       padding: '1rem',
-      marginBottom: '20px'
+      marginBottom: '20px',
+      display: 'flex',
+      justifyContent: 'space-around'
     }}>
       <ul style={{
         listStyle: 'none',
