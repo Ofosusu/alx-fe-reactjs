@@ -2,11 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Navbar from './Navbar.jsx';
-import Home from './Home.jsx';
-import About from './About.jsx';
-import Services from './Services.jsx';
-import Contact from './Contact.jsx';
+import Navbar from './components/Navbar.jsx'
+import Home from './components/Home.jsx';
+import About from './components/About.jsx';
+import Services from './components/Services.jsx';
+import Contact from './components/Contact.jsx';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
