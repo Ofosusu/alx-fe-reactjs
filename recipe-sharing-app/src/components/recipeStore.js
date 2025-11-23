@@ -17,7 +17,21 @@ const useRecipeStore = create((set) => ({
     recipes: state.recipes.map(recipe => 
       recipe.id === updatedRecipe.id ? updatedRecipe : recipe
     )
-  }))
+  })),
+
+  // 👉 ADD THESE FOR THE ALX SEARCH TASK
+  searchTerm: "",
+
+  setSearchTerm: (term) => set({ searchTerm: term }),
+
+  filteredRecipes: [],
+
+  filterRecipes: () =>
+    set((state) => ({
+      filteredRecipes: state.recipes.filter((recipe) =>
+        recipe.title.toLowerCase().includes(state.searchTerm.toLowerCase())
+      ),
+    })),
 }));
 
 export default useRecipeStore;
