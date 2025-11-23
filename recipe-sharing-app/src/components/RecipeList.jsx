@@ -1,4 +1,5 @@
-import useRecipeStore from './recipeStore';
+import { Link } from 'react-router-dom';
+import useRecipeStore from '../recipeStore';
 
 const RecipeList = () => {
   const recipes = useRecipeStore(state => state.recipes);
@@ -23,9 +24,21 @@ const RecipeList = () => {
               <h3 style={{ margin: '0 0 10px 0', color: '#333' }}>
                 {recipe.title}
               </h3>
-              <p style={{ margin: 0, color: '#666' }}>
-                {recipe.description}
+              <p style={{ margin: '0 0 10px 0', color: '#666' }}>
+                {recipe.description.length > 150 
+                  ? recipe.description.substring(0, 150) + '...' 
+                  : recipe.description}
               </p>
+              <Link 
+                to={`/recipe/${recipe.id}`}
+                style={{
+                  color: '#007bff',
+                  textDecoration: 'none',
+                  fontWeight: 'bold'
+                }}
+              >
+                View Details →
+              </Link>
             </div>
           ))}
         </div>
